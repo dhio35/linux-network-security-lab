@@ -1,0 +1,29 @@
+==========================================
+DHIO35 | LAB 02.2
+ACCESS CONTROL & LEAST PRIVILEGE
+Date: Wed Nov 25 11:03:44 WIB 2026
+==========================================
+
+===== 01. DIRECTORY CONFIGURATION =====
+drwxrws--- 2 root dhio35_lab02 4096 Nov 25 10:34 /var/tmp/dhio35-lab02-secure
+drwxrws--- | 2770 | root:dhio35_lab02
+
+===== 02. AUTHORIZED USER =====
+uid=1001(dhio35_lab02) gid=1001(dhio35_lab02) groups=1001(dhio35_lab02)
+
+===== 03. FILE OWNERSHIP =====
+stat: cannot statx '/var/tmp/dhio35-lab02-secure/*': No such file or directory
+
+===== 04. FILE CONTENT =====
+Hello from DHIO35 Lab 02.2
+
+===== 05. UNAUTHORIZED ACCESS =====
+PASS: nobody cannot read directory.
+PASS: nobody cannot write directory.
+
+===== 06. GROUP INHERITANCE =====
+dhio35_lab02
+
+==========================================
+LAB 02.2 EVIDENCE GENERATED
+==========================================
