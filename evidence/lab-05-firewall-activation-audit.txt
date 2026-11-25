@@ -1,0 +1,85 @@
+
+==================================================
+DHIO35 | LAB 05 PHASE 05
+==================================================
+FIREWALL ACTIVATION & ACCESS CONTROL TESTING
+Wed Nov 25 20:28:13 WIB 2026
+
+==================================================
+01. PRE-ACTIVATION RULES
+==================================================
+Added user rules (see 'ufw status' for running firewall):
+ufw allow 22/tcp comment 'SSH management'
+Status: inactive
+
+==================================================
+02. ACTIVATE UFW
+==================================================
+Firewall is active and enabled on system startup
+
+==================================================
+03. ACTIVE FIREWALL RULES
+==================================================
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22/tcp                     ALLOW IN    Anywhere                   # SSH management
+[ 2] 22/tcp (v6)                ALLOW IN    Anywhere (v6)              # SSH management
+
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere                   # SSH management
+22/tcp (v6)                ALLOW IN    Anywhere (v6)              # SSH management
+
+
+==================================================
+04. SSH SERVICE CHECK
+==================================================
+PASS: SSH service is active.
+
+==================================================
+05. SSH PORT CHECK
+==================================================
+PASS: Local TCP port 22 is reachable.
+
+==================================================
+06. SSH KEY AUTHENTICATION
+==================================================
+SSH_KEY_AUTHENTICATION_SUCCESS
+PASS: SSH key authentication succeeded.
+
+==================================================
+07. OUTBOUND DNS TEST
+==================================================
+2606:4700:10::ac42:98b0 archive.ubuntu.com.cdn.cloudflare.net archive.ubuntu.com
+2606:4700:10::6814:1cf6 archive.ubuntu.com.cdn.cloudflare.net archive.ubuntu.com
+PASS: DNS resolution succeeded.
+
+==================================================
+08. OUTBOUND HTTPS CONNECTIVITY
+==================================================
+PASS: Outbound TCP 443 is reachable.
+
+==================================================
+09. FINAL FIREWALL STATUS
+==================================================
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere                   # SSH management
+22/tcp (v6)                ALLOW IN    Anywhere (v6)              # SSH management
+
+PASS: UFW is active.
+
+REPORT SAVED: /home/dhio35/projects/linux-network-security-lab/evidence/lab-05-firewall-activation-audit.txt
+REPORT COPIED TO WINDOWS CLIPBOARD.

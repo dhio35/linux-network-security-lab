@@ -1,0 +1,56 @@
+
+==================================================
+DHIO35 | LAB 05 PHASE 03
+==================================================
+FIREWALL RULES CONFIGURATION
+Wed Nov 25 20:11:25 WIB 2026
+
+==================================================
+01. INITIAL FIREWALL STATUS
+==================================================
+Status: inactive
+
+==================================================
+02. CONFIGURE DEFAULT POLICIES
+==================================================
+Default incoming policy changed to 'deny'
+(be sure to update your rules accordingly)
+Default outgoing policy changed to 'allow'
+(be sure to update your rules accordingly)
+Default routed policy changed to 'deny'
+(be sure to update your rules accordingly)
+
+==================================================
+03. CONFIGURE SSH ACCESS
+==================================================
+Rules updated
+Rules updated (v6)
+
+==================================================
+04. AVAILABLE APPLICATION PROFILES
+==================================================
+Available applications:
+  OpenSSH
+
+==================================================
+05. CONFIGURED FIREWALL RULES
+==================================================
+Status: inactive
+
+==================================================
+06. DEFAULT POLICY VERIFICATION
+==================================================
+IPV6=yes
+DEFAULT_INPUT_POLICY="DROP"
+DEFAULT_OUTPUT_POLICY="ACCEPT"
+DEFAULT_FORWARD_POLICY="DROP"
+
+==================================================
+07. FIREWALL STATUS VERIFICATION
+==================================================
+Status: inactive
+PASS: Rules configured while firewall remains inactive.
+
+IMPORTANT: Firewall has NOT been enabled by this script.
+REPORT SAVED: /home/dhio35/projects/linux-network-security-lab/evidence/lab-05-firewall-rules.txt
+REPORT COPIED TO WINDOWS CLIPBOARD.

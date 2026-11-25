@@ -1,0 +1,80 @@
+
+==================================================
+DHIO35 | LAB 05 PHASE 06
+==================================================
+FINAL LINUX FIREWALL SECURITY AUDIT
+Wed Nov 25 20:29:48 WIB 2026
+
+==================================================
+01. FIREWALL STATUS
+==================================================
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere                   # SSH management
+22/tcp (v6)                ALLOW IN    Anywhere (v6)              # SSH management
+
+PASS: UFW is active
+
+==================================================
+02. DEFAULT FIREWALL POLICIES
+==================================================
+IPV6=yes
+DEFAULT_INPUT_POLICY="DROP"
+DEFAULT_OUTPUT_POLICY="ACCEPT"
+DEFAULT_FORWARD_POLICY="DROP"
+PASS: Incoming default is DROP
+PASS: Outgoing default is ACCEPT
+PASS: Forwarded default is DROP
+
+==================================================
+03. SSH FIREWALL RULE
+==================================================
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 22/tcp                     ALLOW IN    Anywhere                   # SSH management
+[ 2] 22/tcp (v6)                ALLOW IN    Anywhere (v6)              # SSH management
+
+
+==================================================
+04. SSH SERVICE
+==================================================
+PASS: SSH service is active
+PASS: SSH configuration syntax is valid
+PASS: SSH local port 22 is reachable
+
+==================================================
+05. SSH KEY AUTHENTICATION
+==================================================
+SSH_KEY_AUTHENTICATION_SUCCESS
+PASS: SSH key authentication works.
+
+==================================================
+06. OUTBOUND CONNECTIVITY
+==================================================
+2606:4700:10::6814:1cf6 archive.ubuntu.com.cdn.cloudflare.net archive.ubuntu.com
+2606:4700:10::ac42:98b0 archive.ubuntu.com.cdn.cloudflare.net archive.ubuntu.com
+PASS: DNS resolution works
+PASS: Outbound HTTPS TCP 443 works
+
+==================================================
+07. FIREWALL LOGGING
+==================================================
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+
+==================================================
+08. AUDIT SUMMARY
+==================================================
+Passed checks: 10
+Failed checks: 0
+FINAL RESULT: PASS
+
+REPORT SAVED: /home/dhio35/projects/linux-network-security-lab/evidence/lab-05-final-security-audit.txt
+REPORT COPIED TO WINDOWS CLIPBOARD.

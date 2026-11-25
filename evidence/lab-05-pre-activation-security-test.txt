@@ -1,0 +1,55 @@
+
+==================================================
+DHIO35 | LAB 05 PHASE 04
+==================================================
+FIREWALL PRE-ACTIVATION SECURITY TEST
+Wed Nov 25 20:23:11 WIB 2026
+
+==================================================
+01. UFW CONFIGURED RULES
+==================================================
+Added user rules (see 'ufw status' for running firewall):
+ufw allow 22/tcp comment 'SSH management'
+
+==================================================
+02. UFW DEFAULT POLICIES
+==================================================
+Status: inactive
+
+==================================================
+03. SSH SERVICE STATUS
+==================================================
+active
+
+==================================================
+04. SSH CONFIGURATION VALIDATION
+==================================================
+PASS: SSH configuration syntax is valid.
+
+==================================================
+05. SSH LISTENING PORT
+==================================================
+LISTEN 0      4096          0.0.0.0:22        0.0.0.0:*          
+LISTEN 0      4096             [::]:22           [::]:*          
+
+==================================================
+06. LOCAL SSH PORT CONNECTIVITY
+==================================================
+PASS: TCP port 22 is reachable locally.
+
+==================================================
+07. SSH KEY AUTHENTICATION TEST
+==================================================
+Host key verification failed.
+WARNING: SSH key authentication test failed.
+Check SSH agent and authorized_keys before firewall activation.
+
+==================================================
+08. FIREWALL ACTIVATION STATUS
+==================================================
+Status: inactive
+PASS: Firewall remains inactive during pre-activation testing.
+
+No firewall activation was performed.
+REPORT SAVED: /home/dhio35/projects/linux-network-security-lab/evidence/lab-05-pre-activation-security-test.txt
+REPORT COPIED TO WINDOWS CLIPBOARD.
