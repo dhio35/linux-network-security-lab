@@ -1,0 +1,37 @@
+==========================================
+DHIO35 | LAB 03 PHASE 02
+OWNERSHIP & SECURITY AUDIT
+Wed Nov 25 13:59:09 WIB 2026
+==========================================
+
+===== 01. SGID DIRECTORY =====
+drwxrws--- | 2770 | root:dhio35_lab02 | /var/tmp/dhio35-lab03-sgid
+
+===== 02. INHERITED FILE =====
+-rw-rw-r-- | 664 | dhio35_lab02:dhio35_lab02 | /var/tmp/dhio35-lab03-sgid/inherited-file.txt
+
+===== 03. GROUP INHERITANCE =====
+Expected: dhio35_lab02
+Actual: dhio35_lab02
+RESULT: PASS
+
+===== 04. UNAUTHORIZED ACCESS =====
+Unauthorized read: PASS
+Unauthorized write: PASS
+
+===== 05. SUID AUDIT =====
+4750 dhio35:dhio35 labs/03-file-permissions/workspace/suid-demo.txt
+
+===== 06. SGID AUDIT =====
+2770 dhio35:dhio35 labs/03-file-permissions/workspace/sgid-demo
+
+===== 07. WORLD-WRITABLE AUDIT =====
+
+===== 08. VALIDATION SUMMARY =====
+SGID inheritance: PASS
+Unauthorized read: PASS
+Unauthorized write: PASS
+
+==========================================
+LAB 03 PHASE 02 COMPLETED
+==========================================

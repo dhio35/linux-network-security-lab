@@ -1,0 +1,40 @@
+==========================================
+DHIO35 | LINUX FUNDAMENTALS LAB 03
+FILE PERMISSIONS AUDIT
+Wed Nov 25 11:31:27 WIB 2026
+==========================================
+
+===== 01. SYSTEM IDENTITY =====
+dhio35
+uid=1000(dhio35) gid=1000(dhio35) groups=1000(dhio35),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),100(users),105(netdev)
+
+===== 02. FILE PERMISSIONS =====
+-rw-r--r-- | 644 | dhio35:dhio35 | /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/public.txt
+-rwxr-xr-x | 755 | dhio35:dhio35 | /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/executable.sh
+-rwx------ | 700 | dhio35:dhio35 | /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/private.txt
+-rwsr-x--- | 4750 | dhio35:dhio35 | /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/suid-demo.txt
+
+===== 03. DIRECTORY PERMISSIONS =====
+drwxrws--- | 2770 | dhio35:dhio35 | /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/sgid-demo
+drwxrwxrwt | 1777 | dhio35:dhio35 | /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/sticky-demo
+
+===== 04. EXECUTION TEST =====
+DHIO35 Lab 03
+
+===== 05. SPECIAL PERMISSIONS =====
+SUID:
+-rwsr-x--- | 4750 | /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/suid-demo.txt
+SGID:
+drwxrws--- | 2770 | /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/sgid-demo
+Sticky Bit:
+drwxrwxrwt | 1777 | /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/sticky-demo
+
+===== 06. PERMISSION NUMERIC SUMMARY =====
+644 /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/public.txt
+755 /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/executable.sh
+700 /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/private.txt
+4750 /home/dhio35/projects/linux-network-security-lab/labs/03-file-permissions/workspace/suid-demo.txt
+
+==========================================
+LAB 03 PHASE 01 COMPLETED
+==========================================

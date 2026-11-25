@@ -6,3 +6,6 @@ __pycache__/
 .pytest_cache/
 .vscode/
 labs/01-linux-fundamentals/filesystem-exploration.txt
+
+# Linux Lab 03 temporary workspace
+labs/03-file-permissions/workspace/
