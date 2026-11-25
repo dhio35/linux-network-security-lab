@@ -1,0 +1,42 @@
+==========================================
+DHIO35 | LAB 04 PHASE 02
+OPENSSH SERVER INSTALLATION
+Wed Nov 25 15:45:59 WIB 2026
+==========================================
+
+===== 01. PACKAGE STATUS =====
+install ok installed 1:10.2p1-2ubuntu3.8
+
+===== 02. SSH DAEMON VERSION =====
+OpenSSH_10.2p1 Ubuntu-2ubuntu3.8, OpenSSL 3.5.5 27 Jan 2026
+
+===== 03. SSH SERVICE STATUS =====
+active
+enabled
+
+===== 04. PORT 22 STATUS =====
+LISTEN 0      4096          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=2191,fd=3),("systemd",pid=1,fd=188))
+LISTEN 0      4096             [::]:22           [::]:*    users:(("sshd",pid=2191,fd=4),("systemd",pid=1,fd=189))
+
+===== 05. SSH HOST KEYS =====
+-rw-r--r-- 1 root root 171 Nov 25 15:45 /etc/ssh/ssh_host_ecdsa_key.pub
+-rw-r--r-- 1 root root  91 Nov 25 15:45 /etc/ssh/ssh_host_ed25519_key.pub
+-rw-r--r-- 1 root root 563 Nov 25 15:45 /etc/ssh/ssh_host_rsa_key.pub
+
+===== 06. SSH CONFIGURATION =====
+-rw-r--r-- 1 root root 4.3K Oct  8 23:36 /etc/ssh/sshd_config
+
+===== 07. SSH CONFIG VALIDATION =====
+Configuration syntax: VALID
+
+===== 08. SSH LISTENING CONFIGURATION =====
+port 22
+listenaddress [::]:22
+listenaddress 0.0.0.0:22
+permitrootlogin prohibit-password
+pubkeyauthentication yes
+passwordauthentication yes
+
+==========================================
+LAB 04 PHASE 02 COMPLETED
+==========================================

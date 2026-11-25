@@ -1,0 +1,48 @@
+==========================================
+DHIO35 | LAB 04 PHASE 01
+SSH SECURITY BASELINE AUDIT
+Wed Nov 25 14:41:12 WIB 2026
+==========================================
+
+===== 01. SYSTEM INFORMATION =====
+ Static hostname: Dhio
+       Icon name: computer-container
+         Chassis: container ☐
+      Machine ID: 97c30c861ad047dabb6ffac86fd5c1ba
+         Boot ID: de535574d02e4b9a9c5466756f1ad60e
+  Virtualization: wsl
+Operating System: Ubuntu 26.04.1 LTS
+          Kernel: Linux 6.18.58.1-microsoft-standard-WSL2
+    Architecture: x86-64
+6.18.58.1-microsoft-standard-WSL2
+
+===== 02. SSH CLIENT =====
+OpenSSH_10.2p1 Ubuntu-2ubuntu3.8, OpenSSL 3.5.5 27 Jan 2026
+
+===== 03. SSH SERVER PACKAGE =====
+unknown ok not-installed
+
+===== 04. SSH DAEMON =====
+sshd executable not found.
+
+===== 05. SSH SERVICE STATUS =====
+SSH service is not active or not installed.
+not-found
+
+===== 06. PORT 22 LISTENING STATUS =====
+No SSH listener detected on port 22.
+
+===== 07. FIREWALL STATUS =====
+UFW is not installed.
+
+===== 08. SSH CONFIGURATION FILE =====
+SSH server configuration not found.
+
+===== 09. SSH DIRECTORY =====
+drwx------ 2 dhio35 dhio35 4096 Nov  3 09:13 /home/dhio35/.ssh
+known_hosts | 600 | dhio35:dhio35
+known_hosts.old | 644 | dhio35:dhio35
+
+==========================================
+LAB 04 PHASE 01 COMPLETED
+==========================================

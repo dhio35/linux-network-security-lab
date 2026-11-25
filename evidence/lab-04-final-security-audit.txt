@@ -1,0 +1,70 @@
+==========================================
+DHIO35 | LAB 04 PHASE 05
+SSH FINAL SECURITY AUDIT
+Wed Nov 25 19:55:50 WIB 2026
+==========================================
+
+===== 01. SSH CONFIGURATION VALIDATION =====
+PASS: SSH syntax valid.
+
+===== 02. EFFECTIVE SECURITY POLICY =====
+logingracetime 30
+maxauthtries 3
+permitrootlogin no
+pubkeyauthentication yes
+passwordauthentication no
+kbdinteractiveauthentication no
+x11forwarding no
+permitemptypasswords no
+allowusers dhio35
+
+===== 03. SSH SERVICE STATUS =====
+active
+enabled
+
+===== 04. SSH NETWORK LISTENER =====
+LISTEN 0      4096          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=178,fd=3),("systemd",pid=1,fd=76))
+LISTEN 0      4096             [::]:22           [::]:*    users:(("sshd",pid=178,fd=4),("systemd",pid=1,fd=77))
+
+===== 05. SSH DIRECTORY PERMISSIONS =====
+drwx------ | 700 | dhio35:dhio35 | /home/dhio35/.ssh
+-rw------- | 600 | dhio35:dhio35 | /home/dhio35/.ssh/authorized_keys
+-rw------- | 600 | dhio35:dhio35 | /home/dhio35/.ssh/id_ed25519
+
+===== 06. SSH PUBLIC KEY FINGERPRINT =====
+256 SHA256:BUAkjduyY5ItypKCxPiNsyaFdCaSVuMpjtJW8YMfVXw dhio35@linux-network-security-lab (ED25519)
+
+===== 07. SSH HOST KEY FINGERPRINTS =====
+256 SHA256:gnGhgTTK7XTxF2CnXIzN1MMNgdB1tpUwYY1rRz9yz6o root@Dhio (ED25519)
+3072 SHA256:zov35ehl7JHpJA3x7W0vQk+6UENrAerxfphHXQqdIfw root@Dhio (RSA)
+
+===== 08. AUTHENTICATION VERIFICATION =====
+PASS: Public key authentication
+dhio35
+
+===== 09. RECENT SSH SECURITY EVENTS =====
+Nov 25 19:51:41 Dhio systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Nov 25 19:51:41 Dhio sshd[178]: Server listening on 0.0.0.0 port 22.
+Nov 25 19:51:41 Dhio sshd[178]: Server listening on :: port 22.
+Nov 25 19:51:41 Dhio systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Nov 25 19:51:49 Dhio sshd-session[496]: Connection closed by authenticating user dhio35 127.0.0.1 port 58940 [preauth]
+Nov 25 19:54:22 Dhio sshd-session[647]: Accepted publickey for dhio35 from 127.0.0.1 port 51860 ssh2: ED25519 SHA256:BUAkjduyY5ItypKCxPiNsyaFdCaSVuMpjtJW8YMfVXw
+Nov 25 19:54:22 Dhio sshd-session[647]: pam_unix(sshd:session): session opened for user dhio35(uid=1000) by dhio35(uid=0)
+Nov 25 19:54:23 Dhio sshd-session[647]: pam_unix(sshd:session): session closed for user dhio35
+Nov 25 19:55:50 Dhio sshd-session[743]: Accepted publickey for dhio35 from 127.0.0.1 port 46162 ssh2: ED25519 SHA256:BUAkjduyY5ItypKCxPiNsyaFdCaSVuMpjtJW8YMfVXw
+Nov 25 19:55:50 Dhio sshd-session[743]: pam_unix(sshd:session): session opened for user dhio35(uid=1000) by dhio35(uid=0)
+Nov 25 19:55:51 Dhio sshd-session[743]: pam_unix(sshd:session): session closed for user dhio35
+
+===== 10. AUDIT CONCLUSION =====
+SSH configuration: VALID
+Public key authentication: VERIFIED
+Password authentication: DISABLED
+Root login: DISABLED
+Authorized account: dhio35
+
+==========================================
+LAB 04 PHASE 05 COMPLETED
+==========================================
+
+Evidence saved: evidence/lab-04-final-security-audit.txt
+Report copied to Windows clipboard.

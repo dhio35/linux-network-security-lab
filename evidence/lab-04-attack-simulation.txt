@@ -1,0 +1,57 @@
+==========================================
+DHIO35 | LAB 04 PHASE 04
+SSH SECURITY ATTACK SIMULATION
+Wed Nov 25 16:30:57 WIB 2026
+==========================================
+
+===== 01. VALID SSH AUTHENTICATION =====
+dhio35
+PASS: Authorized user authenticated.
+
+===== 02. UNAUTHORIZED USER TEST =====
+nobody@localhost: Permission denied (publickey).
+PASS: Unauthorized user rejected.
+
+===== 03. ROOT LOGIN TEST =====
+root@localhost: Permission denied (publickey).
+PASS: Root login rejected.
+
+===== 04. PASSWORD AUTHENTICATION TEST =====
+dhio35@localhost: Permission denied (publickey).
+PASS: Password authentication rejected.
+
+===== 05. SSH SECURITY LOGS =====
+Nov 25 16:24:16 Dhio sshd-session[2798]: Accepted publickey for dhio35 from 127.0.0.1 port 37394 ssh2: ED25519 SHA256:BUAkjduyY5ItypKCxPiNsyaFdCaSVuMpjtJW8YMfVXw
+Nov 25 16:24:16 Dhio sshd-session[2798]: pam_unix(sshd:session): session opened for user dhio35(uid=1000) by dhio35(uid=0)
+Nov 25 16:24:16 Dhio sshd-session[2798]: pam_unix(sshd:session): session closed for user dhio35
+Nov 25 16:26:19 Dhio sshd[2191]: Received signal 15; terminating.
+Nov 25 16:26:19 Dhio systemd[1]: Stopping ssh.service - OpenBSD Secure Shell server...
+Nov 25 16:26:19 Dhio systemd[1]: ssh.service: Deactivated successfully.
+Nov 25 16:26:19 Dhio systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+Nov 25 16:26:19 Dhio systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Nov 25 16:26:19 Dhio sshd[2958]: Server listening on 0.0.0.0 port 22.
+Nov 25 16:26:19 Dhio sshd[2958]: Server listening on :: port 22.
+Nov 25 16:26:19 Dhio systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Nov 25 16:26:19 Dhio sshd-session[2982]: Accepted publickey for dhio35 from 127.0.0.1 port 50356 ssh2: ED25519 SHA256:BUAkjduyY5ItypKCxPiNsyaFdCaSVuMpjtJW8YMfVXw
+Nov 25 16:26:19 Dhio sshd-session[2982]: pam_unix(sshd:session): session opened for user dhio35(uid=1000) by dhio35(uid=0)
+Nov 25 16:26:19 Dhio sshd-session[2982]: pam_unix(sshd:session): session closed for user dhio35
+Nov 25 16:30:57 Dhio sshd-session[3089]: Accepted publickey for dhio35 from 127.0.0.1 port 41344 ssh2: ED25519 SHA256:BUAkjduyY5ItypKCxPiNsyaFdCaSVuMpjtJW8YMfVXw
+Nov 25 16:30:57 Dhio sshd-session[3089]: pam_unix(sshd:session): session opened for user dhio35(uid=1000) by dhio35(uid=0)
+Nov 25 16:30:57 Dhio sshd-session[3089]: pam_unix(sshd:session): session closed for user dhio35
+Nov 25 16:30:57 Dhio sshd-session[3130]: User nobody from 127.0.0.1 not allowed because not listed in AllowUsers
+Nov 25 16:30:57 Dhio sshd-session[3130]: Connection closed by invalid user nobody 127.0.0.1 port 41356 [preauth]
+Nov 25 16:30:57 Dhio sshd-session[3133]: User root from 127.0.0.1 not allowed because not listed in AllowUsers
+Nov 25 16:30:57 Dhio sshd-session[3133]: Connection closed by invalid user root 127.0.0.1 port 41366 [preauth]
+Nov 25 16:30:57 Dhio sshd-session[3136]: Connection closed by authenticating user dhio35 127.0.0.1 port 41374 [preauth]
+
+===== 06. FINAL VALIDATION =====
+PASS: SSH configuration valid.
+active
+enabled
+
+==========================================
+LAB 04 PHASE 04 COMPLETED
+==========================================
+
+Evidence saved: evidence/lab-04-attack-simulation.txt
+Report copied to Windows clipboard.
